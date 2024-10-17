@@ -55,7 +55,6 @@ console.log("a outside condition",+b);
 // //         }
 // //         data=cCompiler();
 
-
 // //     }
 // //         if(language=="java"){
            
