@@ -1,77 +1,60 @@
-/*console.log("wwelcome to js");
-const a=12;
-console.log(a);
-if(a>10){
-    //let b=23;
-    console.log("a inside condition",+a);
-    a=40;
-}
-console.log("a outside condition",+b);
-*/
-// let a=12;
-// let b="12";
-// // console.log(typeof a);
-// // let today=Date();
-// // console.log(today);
+// console.log("hello world")
+// const div = document.getElementsByClassName("parent");
+// console.log(div);
+// //div[0].innerHTML = "<h2  style=color : red> hello world</h2>"
+// const h1 = document.createElement("h1");
+// console.log(h1);
+// h1.innerText="ABES Engineering college";
+// console.log(h1);
+// h1.style.backgroundColor="red";
+// h1.style.color="blue";
+// h1.style.marginLeft ="100px";
+// div[0].appendChild(h1);
+// const img = document.createElement("img");
+// img.src = "https://foujiadda.com/wp-content/uploads/2024/07/unnamed-14.png";
+// console.log(img);
+// img.setAttribute("height","300");
+// img.setAttribute("width","100");
+// div[0].appendChild(img);
+// //div[0].removeChild(img);
+// function getData(){
+//     console.log("hi , inside getdata");
+//     div[0].innerHTML="<h2 style=color:red>hello,event handled</h2>";
+// }
 
-// if(a===b){
-//     console.log("welcome");
+// const button=document.getElementsByClassName("btn");
+// console.log(button);
+// button[0].addEventListener("click",getData);
+
+// const promise=new Promise((resolve,reject)=>{
+//     let a=12;
+//     if(a>10)
+// {
+//     resolve("accepted");
 // }
 // else{
-//     console.log("hello");
+//     reject("Not Accepted");
 // }
 
-// let myname="Amit";
-// let college="ABES EC";
-// let result=`hi my name is ${myname} and Im doing engineering from ${college}`;
-// // console.log(result);
-// // let key="sname"
-// const  students=[{
-//     sname:"AMIT",
-//     course:"B.tech",
-//     college:"ABESEC"
-// },
-// {
-//     sname:"Ram",
-//     course:"MCA",
-//     college:"ABESEC"
 
-// }
-
-// ]
-// // console.log("Name: "+students.sname+ "Course: "+students.course);
-
-// // const {sname}=students;
-// // students[key]="Rahul";
-// // console.log(students);
+// })
 
 
+// promise.then((msg)=>{console.log(msg)}
+// ).catch((error)=>{console.log(error)})
+// .finally(()=>console.log("All resources have closed"));
 
-// // function selectLanguage(language){
-// //     let data;
-// //     if(language=="c"){
-// //     function cCompiler(){
-// //         return "cCompiler selected";
-// //         }
-// //         data=cCompiler();
+// const promise2=new Promise((resolve,reject)=>{
+//     resolve({name:"supriya",Stack:"MERN Stack"});
 
-// //     }
-// //         if(language=="java"){
-           
-// //         function javaCompiler(){
-// //         return "JavaCompiler selected";
-        
-// //         }
-// //         data=javaCompiler();
-// //     }
+// });
+// promise2.then((data)=>{console.log("hi,"+data.name)})
+// .catch(x=>{console.log(x)})
 
-// //     return data;
-// // }
-
-// // let output=selectLanguage("c");
-// // console.log(output);
-
-console.log("hello world");
-let parent=document.getElementsByClassName("Parent");
-console.log(parent);
-parent[0].innerHTML="<h1> data has change </h1>";
+const response=fetch("https://dummyjson.com/products");
+response.then((data)=>{
+    console.log(data);
+    data.json().then((res)=>{
+        console.log(res);
+    })
+})

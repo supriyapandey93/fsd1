@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+#bulb-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#bulb-container img {
+    width: 100px;
+    height: 150px;
+    object-fit: contain;
+    border: 2px solid #333;
+    cursor: pointer;
+}
