@@ -1,21 +1,23 @@
 import React from 'react';
 import './student.css';
-function Student(props) {
+function Student({data}) {
   return (
     <div className='icard'>
+
+    {/* {JSON.stringify(data)} */}
         <table>
             <tbody>
                 <tr><td colSpan={2}>
-                    {props.college}
+                    {data.college}
                     </td></tr>
                     <tr><td colSpan={2}>
-                    {props.pic}
+                    {data.pic}
                     </td></tr>
-                    <tr><td>name</td><td>{props.name}</td></tr>
-                    <tr><td>branch</td><td>{props.branch}</td></tr>
-                    <tr><td>section</td><td>{props.section}</td></tr>
+                    <tr><td>name</td><td>{data.name}</td></tr>
+                    <tr><td>branch</td><td>{data.branch}</td></tr>
+                    <tr><td>section</td><td>{data.section}</td></tr>
             </tbody>
-        </table>
+        </table> 
     </div>
   )
 }
