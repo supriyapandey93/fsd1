@@ -3,6 +3,7 @@ import './App.css';
 
 import Student from "./Student"
 import UseStudentState from './UseStudentState';
+import ImageManipulation from './ImageManipulation';
 function App() {
   const h1=<h1>hello world</h1>;
 const mystyle={
@@ -10,6 +11,7 @@ const mystyle={
   backgroundColor:'red'
 
 }
+
 
 // const stdata=[{
 //   college:"abesec",
@@ -36,10 +38,11 @@ const mystyle={
 
 // ]
     return (
-      <div>
+      <div style={{marginLeft:"600px"}}>
         <h2>hello using usestate</h2>
         <div>
-          <UseStudentState></UseStudentState>
+          {/* <UseStudentState></UseStudentState> */}
+          <ImageManipulation/>
         </div>
       </div>
       
