@@ -1,81 +1,82 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react'
+import Student from './Student'
+import useStudentState from './useStudentState'
+import Login from './Login'
+import Registration from './Registration'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import MainLayout from './MainLayout'
+import DashBoard from './DashBoard'
+// import logo from "./assets/onbulb.jpg"
+// import Imagemanipulation from './imagemanipulation'
+// import MyUseEffect from '../MyUseEffect'
+// import UseFetchAPI from './UseFetchAPI'
+// export default function Login(){
+  
+// }
+export default function App() {
+  const[rData,setrdata]=useState();
+  // const h1 = <h1>hello world</h1>
+  // const mystyle = {
+  //   color: 'red',
+  //   backgroundColor:'yellow'
+  // } 
 
-import Student from "./Student"
-import UseStudentState from './UseStudentState';
-import ImageManipulation from './ImageManipulation';
-import MyuseEffect from './MyuseEffect';
-import UseFetchApi from './UseFetchApi';
-function App() {
-  const h1=<h1>hello world</h1>;
-const mystyle={
-  color:'yellow',
-  backgroundColor:'red'
-
-}
-
-
-// const stdata=[{
-//   college:"abesec",
-//   pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png'></img>,
-//   name:"supriya",
-//   branch:"cse",
-//   section:'b'
-
-// },
-// {
-//   college:"abesec",
-//   pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png'></img>,
-//   name:"supriya",
-//   branch:"cse",
-//   section:'b'},
-//   {
-//     college:"abesec",
-//     pic:<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png'></img>,
-//     name:"supriya",
-
-//     branch:"cse",
-//     section:'b',}
-
-
-// ]
-    return (
-      <div style={{marginLeft:"600px"}}>
-        <h2>hello using usestate</h2>
-        <div>
-          {/* <UseStudentState></UseStudentState> */}
-          {/* <ImageManipulation/> */}
-
-          {/* <MyuseEffect/> */}
-          <UseFetchApi/>
-        </div>
-      </div>
+  // const mystyle2 = {
+  //   display: 'flex'
+  // }
+  // const data=[{
+  //   college:"ABES ENGINEERING COLLEGE",
+  //   pic:"",
+  //   name:"rahul",
+  //   branch:"CSE",
+  //   section:"B"
+  // },{ college:"ABES ENGINEERING COLLEGE",
+  //   pic:"",
+  //   name:"rahul",
+  //   branch:"CSE",
+  //   section:"B"
+  // },{ college:"ABES ENGINEERING COLLEGE",
+  //   pic:"",
+  //   name:"rahul",
+  //   branch:"CSE",
+  //   section:"B"
+  // }]
+  console.log(rData)
+  return (
+    
+    <div>
       
-      // <div style={{backgroundColor:'tomato'}}>
-      //   {h1}
-      //    <div style={mystyle}>
-      //     ABES ENGINEERING COLLEGE
-      //   </div>
-      //   <div style={{display:'flex'}}>
-      //     {
-      //       stdata.map(
-      //         (ele)=>{
-      //          return <Student data={ele}></Student>
+      <BrowserRouter>
+      <Routes>
+       <Route path='/' element={<MainLayout/>}>
+      <Route path='/login' element={<Login regdata={rData}></Login>}/>
+      <Route path='/registration' element={<Registration regData={setrdata}></Registration>}></Route>
+        </Route>
+        <Route path='/dashboard' element={<DashBoard/>}></Route>
+      </Routes>
+      </BrowserRouter>
+      {/* <useStudentState/> */}
+    </div>
+  //   <div style={{backgroundColor:'cyan'}}>
+  //   {h1}
+  //   <div style={mystyle}>ABES Engineering College</div>
+  //   <div style={mystyle2}>
+  //     {/* <Student college=""
+  //     pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height={100} width={100}/>}
+  //     // pic={<img src={logo} height={100} width={100}/>}
+  //     name = "Yash"
+  //     branch="CSE"
+  //     roll="1"
+  //     section = "B">
+  //     </Student></div>
+  //     <Student></Student> */}
+  //     {data.map((student,index)=>(
+  //       <Student key={index} {...student}/>
 
-      //         }
-      //       )
-      //     }
-          
-      //     {/* <><Student college="ABES ENGG COLLEGE" name="supriya" branch="cse" section="b" pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height="100px"></img>}/></>
-      //     <><Student college="ABES ENGG COLLEGE" name="supriya" branch="cse" section="b"pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height="100px"></img>}/></>
-      //     <><Student college="ABES ENGG COLLEGE" name="supriya" branch="cse" section="b"pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height="100px"></img>}/></>
-      //     <><Student college="ABES ENGG COLLEGE" name="supriya" branch="cse" section="b"pic={<img src='https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/img/srixner.png' height="100px"></img>}/></> */}
-          
-      //   </div> 
-      // </div>
-        
-    );
-}
+  //     ))
+  //     }
 
- 
-export default App;
+  //     </div>
+  //   </div>
+  // );
+  )}
